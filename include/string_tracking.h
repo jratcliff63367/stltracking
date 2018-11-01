@@ -1,5 +1,5 @@
 #pragma once
-
+#include <string>
 #include "stl_tracking.h"
 
 template <class CharT, class Traits = std::char_traits<CharT>>
