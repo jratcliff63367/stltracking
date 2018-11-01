@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="F:\github\stltracking\app\stltracking\main.cpp">
+      <Filter>app\stltracking</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="F:\github\stltracking\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="app\stltracking">
+      <UniqueIdentifier>{DCF31FD6-CF9E-38A9-BACB-DA64488D5B4F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="app">
+      <UniqueIdentifier>{907AF895-886F-31D6-A1F7-5DCA7DAC2232}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
