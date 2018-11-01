@@ -7,6 +7,9 @@
 #include "string_tracking.h"
 #include "map_tracking.h"
 #include "unordered_map_tracking.h"
+#include "unordered_set_tracking.h"
+#include "list_tracking.h"
+#include "queue_tracking.h"
 
 void exampleTrackingVector(void)
 {
@@ -41,6 +44,35 @@ void exampleTrackingUnorderedMap(void)
     testMap[5] = 4;
 }
 
+void exampleTrackingUnorderedSet(void)
+{
+    unordered_set< uint32_t > testMap;
+    testMap.insert(1);
+    testMap.insert(2);
+    testMap.insert(3);
+    testMap.insert(4);
+}
+
+void exampleTrackingList(void)
+{
+    list< uint32_t > testMap;
+    testMap.push_back(1);
+    testMap.push_front(2);
+    testMap.push_back(3);
+    testMap.push_front(4);
+}
+
+void exampleTrackingQueue(void)
+{
+    queue< uint32_t > testMap;
+    testMap.push(1);
+    testMap.push(2);
+    testMap.push(3);
+    testMap.push(4);
+}
+
+
+
 int main(int /* argc */,const char ** /* argv */)
 {
     printf("==============================\n");
@@ -70,6 +102,28 @@ int main(int /* argc */,const char ** /* argv */)
     exampleTrackingUnorderedMap();
     printf("==============================\n");
     printf("\n");
+
+    printf("==============================\n");
+    printf("ExampleTrackingUnorderedSet\n");
+    printf("==============================\n");
+    exampleTrackingUnorderedSet();
+    printf("==============================\n");
+    printf("\n");
+
+    printf("==============================\n");
+    printf("ExampleTrackingList\n");
+    printf("==============================\n");
+    exampleTrackingList();
+    printf("==============================\n");
+    printf("\n");
+
+    printf("==============================\n");
+    printf("ExampleTrackingQueue\n");
+    printf("==============================\n");
+    exampleTrackingQueue();
+    printf("==============================\n");
+    printf("\n");
+
 
 	return 0;
 }
