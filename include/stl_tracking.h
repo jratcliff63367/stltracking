@@ -10,13 +10,18 @@ class tracking_allocator_base
 public:
     using value_type = T;
 
+    tracking_allocator_base() = default;
+
+    template <class U>
+    tracking_allocator_base(const tracking_allocator_base<U>& ) {}
+
     T *allocate(std::size_t size)
     {
-        printf("Track alloc...\n");
+        printf("Track alloc... %zu\n", size);
         return reinterpret_cast<T*>(std::malloc(sizeof(T)*size));
     }
 
-    void deallocate(T * p, std::size_t n)
+    void deallocate(T * p, std::size_t )
     {
         if (p != nullptr)
         {
