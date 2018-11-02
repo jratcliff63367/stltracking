@@ -13,7 +13,7 @@
 
 void exampleTrackingVector(void)
 {
-    vector<uint32_t> vec;
+    stdt::vector<uint32_t> vec;
     for (uint32_t i = 0; i < 10; i++)
     {
         vec.push_back(i);
@@ -22,13 +22,13 @@ void exampleTrackingVector(void)
 
 void exampleTrackingString(void)
 {
-    string s("This is a test string");
+    stdt::string s("This is a test string");
     s += "more data";
 }
 
 void exampleTrackingMap(void)
 {
-    map< uint32_t, uint32_t > testMap;
+    stdt::map< uint32_t, uint32_t > testMap;
     testMap[1] = 1;
     testMap[3] = 2;
     testMap[4] = 3;
@@ -37,7 +37,7 @@ void exampleTrackingMap(void)
 
 void exampleTrackingUnorderedMap(void)
 {
-    unordered_map< uint32_t, uint32_t > testMap;
+    stdt::unordered_map< uint32_t, uint32_t > testMap;
     testMap[1] = 1;
     testMap[3] = 2;
     testMap[4] = 3;
@@ -46,7 +46,7 @@ void exampleTrackingUnorderedMap(void)
 
 void exampleTrackingUnorderedSet(void)
 {
-    unordered_set< uint32_t > testMap;
+    stdt::unordered_set< uint32_t > testMap;
     testMap.insert(1);
     testMap.insert(2);
     testMap.insert(3);
@@ -55,7 +55,7 @@ void exampleTrackingUnorderedSet(void)
 
 void exampleTrackingList(void)
 {
-    list< uint32_t > testMap;
+    stdt::list< uint32_t > testMap;
     testMap.push_back(1);
     testMap.push_front(2);
     testMap.push_back(3);
@@ -64,7 +64,7 @@ void exampleTrackingList(void)
 
 void exampleTrackingQueue(void)
 {
-    queue< uint32_t > testMap;
+    stdt::queue< uint32_t > testMap;
     testMap.push(1);
     testMap.push(2);
     testMap.push(3);

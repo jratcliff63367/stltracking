@@ -4,6 +4,14 @@
 
 #include "stl_tracking.h"
 
-template <class Key, class Hash = std::hash<Key>, class KeyEqual = std::equal_to<Key>>
-using unordered_set = std::unordered_set<Key, Hash, KeyEqual, tracking_allocator<Key>>;
+namespace stdt
+{
 
+#if USE_STL_TRACKING
+    template <class Key, class Hash = std::hash<Key>, class KeyEqual = std::equal_to<Key>>
+    using unordered_set = std::unordered_set<Key, Hash, KeyEqual, tracking_allocator<Key>>;
+#else
+    template <class Key, class Hash = std::hash<Key>, class KeyEqual = std::equal_to<Key>>
+    using unordered_set = std::unordered_set<Key, Hash, KeyEqual>;
+#endif
+}
