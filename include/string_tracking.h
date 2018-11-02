@@ -19,3 +19,21 @@ namespace stdt
 
 }
 
+namespace std
+{
+
+template<> struct hash<stdt::string>
+{
+public:
+	size_t operator()(const stdt::string &str) const
+        {
+                size_t hash = 0;
+                for(auto c : str)
+                {
+			hash = hash * 31 + c;
+                }
+                return hash;
+        }
+};
+
+}

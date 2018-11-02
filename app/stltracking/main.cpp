@@ -53,6 +53,14 @@ void exampleTrackingUnorderedSet(void)
     testMap.insert(4);
 }
 
+void exampleTrackingUnorderedSetString(void)
+{
+    stdt::unordered_set< stdt::string > testMap;
+    testMap.insert(stdt::string("bob"));
+    testMap.insert(stdt::string("steve"));
+    testMap.insert(stdt::string("fred"));
+}
+
 void exampleTrackingList(void)
 {
     stdt::list< uint32_t > testMap;
