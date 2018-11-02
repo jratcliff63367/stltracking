@@ -1,5 +1,7 @@
 #pragma once
 
+// Defines the stdt::queue container 
+
 #include "stl_tracking.h"
 
 #include <queue>

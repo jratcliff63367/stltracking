@@ -1,5 +1,20 @@
 #pragma once
 
+// This header files defines a custom allocator of the STL that you can use to intercept
+// all memory allocations.  You can track the memory, call a custom memory allocator,
+// whatever you see fit.
+//
+// Tracking versions of the STL containers are all in the 'stdt' namespace
+//
+// This sample code was created by Chris Dannemiller and John W. Ratcliff
+// The official github location is here:
+//
+// https://github.com/jratcliff63367/stltracking
+//
+// You can contact John W. Ratcliff at mailto:jratcliffscarab@gmail.com
+
+// To completely disable the STL tracking version of the containers just change USE_STL_TRACKING to 0
+//
 #ifdef _MSC_VER
 #define USE_STL_TRACKING 1
 #else
@@ -31,6 +46,9 @@ namespace stdt
             return true;
         }
 
+        // Insert your own memory allocator and custom tracking code here
+        // Any memory allocation done by any STL container in the 'stdt' namespace
+        // will allocate from here
         T *allocate(std::size_t size)
         {
             printf("Track alloc... %zu\n", size);

@@ -1,5 +1,7 @@
 #pragma once
 
+// Defines the stdt::unordered_map container 
+
 #include <unordered_map>
 
 #include "stl_tracking.h"

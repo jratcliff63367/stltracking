@@ -5,3 +5,5 @@
 /stltracking.dir/Debug
 /Win32/Debug/ZERO_CHECK
 /*.bak
+/bin/Debug
+/include/*.bak

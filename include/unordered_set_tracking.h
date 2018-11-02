@@ -1,5 +1,7 @@
 #pragma once
 
+// Defines the stdt::unordered_set container 
+
 #include <unordered_set>
 
 #include "stl_tracking.h"

@@ -1,5 +1,7 @@
 #pragma once
 
+// Defines the stdt::vector container 
+
 #include "stl_tracking.h"
 
 #include <vector>

@@ -1,6 +1,8 @@
 #pragma once
 #include <map>
 
+// Defines the stdt::map container 
+
 #include "stl_tracking.h"
 
 namespace stdt

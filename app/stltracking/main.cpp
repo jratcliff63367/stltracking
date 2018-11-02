@@ -6,11 +6,13 @@
 #include "vector_tracking.h"
 #include "string_tracking.h"
 #include "map_tracking.h"
+#include "set_tracking.h"
 #include "unordered_map_tracking.h"
 #include "unordered_set_tracking.h"
 #include "list_tracking.h"
 #include "queue_tracking.h"
 
+// Test the tracking version of std::vector
 void exampleTrackingVector(void)
 {
     stdt::vector<uint32_t> vec;
@@ -20,12 +22,14 @@ void exampleTrackingVector(void)
     }
 }
 
+// Test the tracking version of std::string
 void exampleTrackingString(void)
 {
     stdt::string s("This is a test string");
     s += "more data";
 }
 
+// Test the tracking version of std::map 
 void exampleTrackingMap(void)
 {
     stdt::map< uint32_t, uint32_t > testMap;
@@ -35,6 +39,24 @@ void exampleTrackingMap(void)
     testMap[5] = 4;
 }
 
+// Test the tracking version of std::map indexed by strings
+void exampleTrackingMapString(void)
+{
+    stdt::map< stdt::string, uint32_t > testMap;
+    testMap[stdt::string("one")] = 1;
+    testMap[stdt::string("two")] = 2;
+    testMap[stdt::string("three")] = 3;
+    testMap[stdt::string("foud")] = 4;
+}
+
+// Test the tracking version of std::map indexed by strings
+void exampleTrackingSetString(void)
+{
+    stdt::set< stdt::string > testSet;
+    testSet.insert(stdt::string("one"));
+    testSet.insert(stdt::string("two"));
+    testSet.insert(stdt::string("three"));
+}
 void exampleTrackingUnorderedMap(void)
 {
     stdt::unordered_map< uint32_t, uint32_t > testMap;
@@ -42,6 +64,15 @@ void exampleTrackingUnorderedMap(void)
     testMap[3] = 2;
     testMap[4] = 3;
     testMap[5] = 4;
+}
+
+void exampleTrackingUnorderedMapString(void)
+{
+    stdt::unordered_map< stdt::string, uint32_t > testMap;
+    testMap[stdt::string("one")] = 1;
+    testMap[stdt::string("two")] = 2;
+    testMap[stdt::string("three")] = 3;
+    testMap[stdt::string("foud")] = 4;
 }
 
 void exampleTrackingUnorderedSet(void)
@@ -63,11 +94,11 @@ void exampleTrackingUnorderedSetString(void)
 
 void exampleTrackingList(void)
 {
-    stdt::list< uint32_t > testMap;
-    testMap.push_back(1);
-    testMap.push_front(2);
-    testMap.push_back(3);
-    testMap.push_front(4);
+    stdt::list< stdt::string > testMap;
+    testMap.push_back(stdt::string("one"));
+    testMap.push_front(stdt::string("two"));
+    testMap.push_back(stdt::string("three"));
+    testMap.push_front(stdt::string("foud"));
 }
 
 void exampleTrackingQueue(void)
@@ -101,6 +132,14 @@ int main(int /* argc */,const char ** /* argv */)
     printf("ExampleTrackingMap\n");
     printf("==============================\n");
     exampleTrackingMap();
+    exampleTrackingMapString();
+    printf("==============================\n");
+    printf("\n");
+
+    printf("==============================\n");
+    printf("ExampleTrackingSet\n");
+    printf("==============================\n");
+    exampleTrackingSetString();
     printf("==============================\n");
     printf("\n");
 
@@ -108,6 +147,7 @@ int main(int /* argc */,const char ** /* argv */)
     printf("ExampleTrackingUnorderedMap\n");
     printf("==============================\n");
     exampleTrackingUnorderedMap();
+    exampleTrackingUnorderedMapString();
     printf("==============================\n");
     printf("\n");
 
@@ -115,6 +155,7 @@ int main(int /* argc */,const char ** /* argv */)
     printf("ExampleTrackingUnorderedSet\n");
     printf("==============================\n");
     exampleTrackingUnorderedSet();
+    exampleTrackingUnorderedSetString();
     printf("==============================\n");
     printf("\n");
 
