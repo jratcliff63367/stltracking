@@ -137,8 +137,6 @@ if (WIN32)
 else()
     target_link_libraries(stltracking
         -ldl
-        -lGL
-        -lX11
         -lpthread
     )
 endif()
