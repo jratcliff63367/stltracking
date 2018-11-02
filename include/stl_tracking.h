@@ -3,7 +3,7 @@
 #ifdef _MSC_VER
 #define USE_STL_TRACKING 1
 #else
-#define USE_STL_TRACKING 0
+#define USE_STL_TRACKING 1
 #endif
 
 #if USE_STL_TRACKING
